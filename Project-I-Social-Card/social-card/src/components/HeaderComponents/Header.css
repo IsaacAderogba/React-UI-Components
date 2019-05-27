@@ -28,11 +28,11 @@
     margin-top: 12px;
 }
 
-.header-title h3, span {
+.header-title h4, span {
     margin-right: 8px;
 }
 
-.header-title h3 {
+.header-title h4 {
     display: inline;
 }
 
@@ -45,5 +45,5 @@
 
 .header-content {
     margin-top: 12px;
-    line-height: 1.5;
+    line-height: 1.3;
 }

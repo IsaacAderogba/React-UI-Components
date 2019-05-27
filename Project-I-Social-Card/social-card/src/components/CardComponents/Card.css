@@ -4,7 +4,6 @@
 .card-wrapper {
     max-width: 590px;
     margin: 0 auto;
-    border: 1px solid blue;
 }
 
 .card-container {
@@ -12,5 +11,37 @@
     margin-left: 10%;
     display: flex;
     flex-direction: column;
-    border: 1px solid green;
 }
+
+/* Styles for Card Banner */
+.card-image-background {
+    height: 300px;
+    background-image: url("https://tk-assets.lambdaschool.com/fcd75197-7d12-46ec-bc9e-4130f34822fa_reactbackground.png");
+    background-position: center;
+    background-size: 175%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Styles for Card Content */
+.card-content {
+    border: 1px solid lightslategray;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card-content h4 {
+    margin: 12px;
+}
+
+.card-content p {
+    margin: 0 12px;
+    line-height: 1.3;
+}
+
+.card-content span {
+    display: inline-block;
+    margin: 8px 12px;
+    color: lightslategray;    
+}
+
