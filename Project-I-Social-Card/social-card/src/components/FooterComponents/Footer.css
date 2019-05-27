@@ -1,0 +1,26 @@
+.footer-wrapper {
+    max-width: 590px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 16px 0;
+    margin-left: 10%;
+    display: flex;
+}
+
+.footer-container div {
+    margin-right: 32px;
+    color: lightslategray;
+}
+
+.footer-container i {
+    cursor: pointer;
+}
+
+.footer-container div span {
+    margin-left: 8px;
+    vertical-align: super;
+}
