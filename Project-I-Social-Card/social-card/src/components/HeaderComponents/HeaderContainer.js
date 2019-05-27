@@ -7,7 +7,6 @@ import HeaderTitle from "./HeaderTitle";
 import HeaderContent from "./HeaderContent";
 
 
-
 function HeaderContainer() {
   const date = moment().format("MMM Do YY");
 
