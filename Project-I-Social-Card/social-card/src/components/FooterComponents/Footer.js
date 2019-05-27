@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-container">
         <div>
           <i className="material-icons">chat_bubble_outline</i>
-          <span></span>
+          <span>2</span>
         </div>
         <div>
           <i className="material-icons">cached</i>
@@ -25,5 +25,6 @@ function Footer() {
     </div>
   );
 }
+
 
 export default Footer;
