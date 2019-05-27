@@ -1,7 +1,6 @@
 .footer-wrapper {
     max-width: 590px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 .footer-container {
@@ -13,6 +12,10 @@
 
 .footer-container div {
     margin-right: 32px;
+    color: lightslategray;
+}
+
+.footer-container a {
     color: lightslategray;
 }
 

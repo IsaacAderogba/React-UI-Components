@@ -4,7 +4,6 @@
 .header-container {
     max-width: 590px;
     margin: 0 auto;
-    border: 1px solid red;
     display: flex;
 }
 

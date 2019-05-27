@@ -8,20 +8,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // interactivity for footer icons
 const icons = document.querySelectorAll('.footer-container i');
 
-icons[0].addEventListener('click', (event) => {
-    let messageContainer = event.target.parentNode;
-    let messageCount = messageContainer.childNodes[1];
-    messageCount.textContent = parseInt(messageCount.textContent) + 1;
-});
-
-icons[1].addEventListener('click', (event) => {
-    console.log('hello world');
-})
-
-icons[2].addEventListener('click', (event) => {
-    console.log('hello world');
-})
-
-icons[3].addEventListener('click', (event) => {
-    console.log('hello world');
-})
+for(let i = 0; i < 3; i++) {
+    icons[i].addEventListener('click', (event) => {
+        let iconContainer = event.target.parentNode;
+        let iconCount = iconContainer.childNodes[1];
+    
+        if(iconCount.textContent === '') {
+            iconCount.textContent = 1;
+        } else {
+            iconCount.textContent = parseInt(iconCount.textContent) + 1;
+        }
+    });
+}
