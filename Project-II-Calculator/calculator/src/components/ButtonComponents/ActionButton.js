@@ -5,7 +5,7 @@ import ButtonSymbols from "./ButtonSymbols";
 
 export default function ActionButton(props) {
     // props data
-  const { actionText, buttonStyle } = props;
+  const { actionText, buttonStyle, headerTotal, updateTotal } = props;
 
   // style for overall container
   const container = {
@@ -42,13 +42,21 @@ export default function ActionButton(props) {
     color: buttonStyle.color
   };
 
+  const clearClickHandler = () => {
+      updateTotal('0');
+  }
+
+  const zeroClickHandler = () => {
+      updateTotal(headerTotal + 0)
+  }
+
   // render the following, passing props down as necessary
   return (
     <div style={container}>
       <div style={textContainer}>
-        <button style={clearStyle}>{actionText.clear}</button>
+        <button onClick={clearClickHandler} style={clearStyle}>{actionText.clear}</button>
         <NumberButton numbertext={props.numbertext} buttonStyle={buttonStyle} />
-        <button style={style}>{actionText.zero}</button>
+        <button onClick={zeroClickHandler} style={style}>{actionText.zero}</button>
       </div>
       <div style={actionContainer}>
         <ButtonSymbols

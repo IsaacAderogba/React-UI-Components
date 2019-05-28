@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import ActionButton from "./components/ButtonComponents/ActionButton";
 import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay";
 
 // Calculator Data
-const headerTotal = "0";
 const arrayOfButtonNumbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
 const arrayOfButtonSymbols = ["÷", "×", "−", "+", "="];
 const actionText = { clear: "clear", zero: "0" };
@@ -33,9 +32,20 @@ const buttonSymbols = {
   color: "white"
 };
 
-
-
 const App = () => {
+  const [headerTotal, updateTotal] = useState('0');
+
+  // function updateHeaderTotal(headerTotal, cb1, cb2) {
+  //   if(headerTotal === '0') {
+  //     const firstChar = cb1();
+  //     updateTotal(firstChar);
+  //   } else {
+  //     const otherChar = cb2();
+  //     updateTotal(headerTotal + otherChar);
+  //   }
+  // }
+
+
   const style = {
     maxWidth: "456px",
     margin: "0 auto",
@@ -45,15 +55,18 @@ const App = () => {
   return (
     <div style={style}>
       <CalculatorDisplay headerStyle={headerStyle} headerTotal={headerTotal} />
-      <ActionButton
+      <ActionButton 
         actionText={actionText}
         buttonStyle={buttonStyle}
         numbertext={arrayOfButtonNumbers}
         symbolStyle={buttonSymbols}
         buttonSymbols={arrayOfButtonSymbols}
+        headerTotal={headerTotal}
+        updateTotal={updateTotal}
       />
     </div>
   );
 };
+
 
 export default App;
