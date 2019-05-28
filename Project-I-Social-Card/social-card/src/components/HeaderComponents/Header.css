@@ -1,1 +1,48 @@
 /* All styles for your header Components live here */
+
+/* Styles for Header Container */
+.header-container {
+    max-width: 590px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.header-text {
+    margin-left: 8px;
+}
+
+/* Styles for Image Container */
+.image-container {
+    margin-top: 8px;
+    max-width: 50px;
+}
+
+.image-container img {
+    max-width: inherit;
+}
+
+/* Styles for Header Title */
+.header-title {
+    margin-top: 12px;
+}
+
+.header-title h4, span {
+    margin-right: 8px;
+}
+
+.header-title h4 {
+    display: inline;
+}
+
+.header-title span {
+    color: lightslategray;
+    font-size: 14px;
+}
+
+/* Styles for Header Content */
+
+.header-content {
+    margin-top: 12px;
+    line-height: 1.3;
+}
