@@ -4,21 +4,26 @@ import NumberButton from "./NumberButton";
 import ButtonSymbols from "./ButtonSymbols";
 
 export default function ActionButton(props) {
+    // props data
   const { actionText, buttonStyle } = props;
 
+  // style for overall container
   const container = {
     width: "100%",
     display: "flex"
   };
 
+  // style for action button container
   const actionContainer = {
     width: "25%"
   };
 
+  // style for button text container
   const textContainer = {
     width: "75%"
   };
 
+  // style for "0" button text
   const style = {
     width: "100%",
     height: "90px",
@@ -28,6 +33,7 @@ export default function ActionButton(props) {
     color: buttonStyle.color
   };
 
+  // style for "clear" button text
   const clearStyle = {
     width: "100%",
     height: "90px",
@@ -36,6 +42,7 @@ export default function ActionButton(props) {
     color: buttonStyle.color
   };
 
+  // render the following, passing props down as necessary
   return (
     <div style={container}>
       <div style={textContainer}>
