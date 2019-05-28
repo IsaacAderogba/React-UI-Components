@@ -47,8 +47,8 @@ export default function ActionButton(props) {
   };
 
   const zeroClickHandler = () => {
-    if(headerTotal === '0') {
-        return updateTotal('0');
+    if (headerTotal === "0") {
+      return updateTotal("0");
     }
     updateTotal(headerTotal + 0);
   };

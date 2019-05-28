@@ -21,10 +21,10 @@ export default function NumberButton(props) {
     color: buttonStyle.color
   };
 
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     let numberInput = event.target.textContent;
-    if(headerTotal === '0') {
-        return updateTotal(numberInput);
+    if (headerTotal === "0") {
+      return updateTotal(numberInput);
     }
     return updateTotal(headerTotal + numberInput);
   };

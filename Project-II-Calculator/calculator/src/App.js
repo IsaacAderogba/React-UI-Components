@@ -3,7 +3,7 @@ import "./App.css";
 import ActionButton from "./components/ButtonComponents/ActionButton";
 import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay";
 
-// Calculator Data
+// Calculator Data - input numbers from left to right
 const arrayOfButtonNumbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
 const arrayOfButtonSymbols = ["÷", "×", "-", "+", "="];
 const actionText = { clear: "clear", zero: "0" };
@@ -34,17 +34,6 @@ const buttonSymbols = {
 
 const App = () => {
   const [headerTotal, updateTotal] = useState('0');
-
-  // function updateHeaderTotal(headerTotal, cb1, cb2) {
-  //   if(headerTotal === '0') {
-  //     const firstChar = cb1();
-  //     updateTotal(firstChar);
-  //   } else {
-  //     const otherChar = cb2();
-  //     updateTotal(headerTotal + otherChar);
-  //   }
-  // }
-
 
   const style = {
     maxWidth: "456px",
