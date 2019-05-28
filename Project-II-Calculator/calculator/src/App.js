@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import ActionButton from "./components/ButtonComponents/ActionButton";
+import CalculatorDisplay from "./components/DisplayComponents"
 
 const arrayOfButtonNumbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
 const arrayOfButtonSymbols = ['÷', '×', '−', '+', '='];
@@ -13,14 +14,14 @@ const actionText = {
 const buttonStyle = {
   fontSize: "30px",
   fontWeight: "bold",
-  background: "white",
+  background: "transparent",
   color: "black"
 };
 
 const buttonSymbols = {
-  fontSize: "30px",
+  fontSize: "40px",
   fontWeight: "bold",
-  background: "red",
+  background: "darkred",
   color: "white"
 };
 

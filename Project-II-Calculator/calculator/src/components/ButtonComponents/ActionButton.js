@@ -1,21 +1,22 @@
 import React from "react";
 import "./Button.css";
 import NumberButton from "./NumberButton";
+import ButtonSymbols from "./ButtonSymbols";
 
 export default function ActionButton(props) {
   const { actionText, buttonStyle } = props;
 
   const container = {
-    maxWidth: "100%",
-    display: 'flex'
+    width: "100%",
+    display: "flex"
   };
 
   const actionContainer = {
-    maxWidth: "25%"
+    width: "25%"
   };
 
   const textContainer = {
-    maxWidth: "75%"
+    width: "75%"
   };
 
   const style = {
@@ -43,7 +44,10 @@ export default function ActionButton(props) {
         <button style={style}>{actionText.zero}</button>
       </div>
       <div style={actionContainer}>
-          hi
+        <ButtonSymbols
+          symbolStyle={props.symbolStyle}
+          buttonSymbols={props.buttonSymbols}
+        />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export default function NumberButton(props) {
     height: '90px',
     fontSize: buttonStyle.fontSize,
     fontWeight: buttonStyle.fontWeight,
-    background: 'buttonStyle.background',
+    background: buttonStyle.background,
     color: buttonStyle.color
   };
 
