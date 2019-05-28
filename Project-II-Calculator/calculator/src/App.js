@@ -5,7 +5,7 @@ import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay"
 
 // Calculator Data
 const arrayOfButtonNumbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
-const arrayOfButtonSymbols = ["÷", "×", "−", "+", "="];
+const arrayOfButtonSymbols = ["÷", "×", "-", "+", "="];
 const actionText = { clear: "clear", zero: "0" };
 
 // Calculator Header Style

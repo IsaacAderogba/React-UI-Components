@@ -3,7 +3,7 @@ import "./Button.css";
 
 export default function ButtonSymbols(props) {
   // props data
-  const { buttonSymbols, symbolStyle } = props;
+  const { buttonSymbols, symbolStyle, headerTotal, updateTotal  } = props;
 
   // container styles
   const styleContainer = {
@@ -21,11 +21,36 @@ export default function ButtonSymbols(props) {
     color: symbolStyle.color
   };
 
+  function evaluate(fn) {
+    return new Function('return ' + fn)();
+  }
+
+  const clickHandler = (event) => {
+    let symbolInput = event.target.textContent;
+
+    // if user presses x, substitute with *
+    if(symbolInput === '×') {
+        return updateTotal(headerTotal + '*')
+    }
+
+    // if user presses ÷, substitute with /
+    if(symbolInput === '÷') {
+        return updateTotal(headerTotal + '/')
+    }
+
+    // if user press =, then total and return the value
+    if(symbolInput === '=') {
+        return updateTotal(evaluate(headerTotal));
+    }
+    
+    return updateTotal(headerTotal + symbolInput);
+  };
+
   // render
   return (
     <div style={styleContainer}>
       {buttonSymbols.map(symbol => (
-        <button key={symbol} style={style}>
+        <button onClick={clickHandler} key={symbol} style={style}>
           {symbol}
         </button>
       ))}
