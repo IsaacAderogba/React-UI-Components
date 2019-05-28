@@ -1,10 +1,18 @@
 import React from "react";
 import "./App.css";
 import ActionButton from "./components/ButtonComponents/ActionButton";
-import CalculatorDisplay from "./components/DisplayComponents"
+import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay";
 
+const headerTotal = "0";
 const arrayOfButtonNumbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3"];
-const arrayOfButtonSymbols = ['÷', '×', '−', '+', '='];
+const arrayOfButtonSymbols = ["÷", "×", "−", "+", "="];
+
+const headerStyle = {
+  fontSize: "70px",
+  fontWeight: "300",
+  background: "#222222",
+  color: "white"
+};
 
 const actionText = {
   clear: "clear",
@@ -29,11 +37,15 @@ const App = () => {
   const style = {
     maxWidth: "456px",
     margin: "0 auto",
-    border: "1px solid red"
+    border: "1px solid grey"
   };
 
   return (
     <div style={style}>
+      <CalculatorDisplay 
+        headerStyle={headerStyle} 
+        headerTotal={headerTotal} 
+      />
       <ActionButton
         actionText={actionText}
         buttonStyle={buttonStyle}
